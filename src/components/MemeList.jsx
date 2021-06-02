@@ -1,10 +1,13 @@
-import MemeItem from './MemeItem'
-import MEMES from '../memes';
+import MemeItem from './MemeItem';
+import { useSelector } from 'react-redux'
 
 const MemeList = () => {
+  const memes = useSelector((state) => state.memes);
+
   return (
     <div>
-      { MEMES.map(({title, img, downvotes, upvotes}) => <MemeItem
+      { memes.map(({title, img, downvotes, upvotes}, index) => <MemeItem
+        index={index}
         key={title}
         title={title}
         img={img}
