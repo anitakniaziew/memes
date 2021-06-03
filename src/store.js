@@ -9,10 +9,10 @@ const slice = createSlice({
   initialState,
   reducers: {
     upvote(state, action) {
-      state[action.payload].upvotes++
+      state.find(item => item.id === action.payload).upvotes++;
     },
     downvote(state, action) {
-      state[action.payload].downvotes++
+      state.find(item => item.id === action.payload).downvotes++;
     }
   }
 });

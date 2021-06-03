@@ -1,15 +1,22 @@
 import React from 'react';
-import { Provider } from 'react-redux'
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+import { Provider } from 'react-redux';
 import store from './store';
-import MemeList from './components/MemeList'
+import Main from './components/Main';
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <MemeList/>
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Main />
+        </div>
+      </ Router>
     </Provider>
   );
 }

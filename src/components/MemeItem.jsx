@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { downvote, upvote } from '../store';
 
-const MemeItem = ({index, img, title, downvotes, upvotes}) => {
+const MemeItem = ({id, img, title, downvotes, upvotes}) => {
   const dispatch = useDispatch();
 
   return (
@@ -10,14 +10,14 @@ const MemeItem = ({index, img, title, downvotes, upvotes}) => {
       <h2>{title}</h2>
       <img src={img} alt="meme" style={{height: '90%'}}/>
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
-        <button type="button" onClick={() => dispatch(downvote(index))}>Downvotes: {downvotes}</button>
-        <button type="button" onClick={() => dispatch(upvote(index))}>Upvotes: {upvotes}</button>
+        <button type="button" onClick={() => dispatch(downvote(id))}>Downvotes: {downvotes}</button>
+        <button type="button" onClick={() => dispatch(upvote(id))}>Upvotes: {upvotes}</button>
       </div>
     </div>
   )
 }
 MemeItem.propTypes = {
-  index: PropTypes.number,
+  id: PropTypes.number,
   img: PropTypes.string,
   title: PropTypes.string,
   downvotes: PropTypes.number,
