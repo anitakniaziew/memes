@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import MemeList from './MemeList';
+import styles from './main.module.scss';
 
 const  Main = () => {
   const memes = useSelector((state) => state.memes);
@@ -12,7 +13,7 @@ const  Main = () => {
   const regular = memes.filter(({upvotes, downvotes}) => upvotes - downvotes <= 5);
 
   return (
-    <>
+    <div className={styles.main}>
       <Switch>
         <Route path="/hot">
           <MemeList memes={hot} type="hot"/>
@@ -21,7 +22,7 @@ const  Main = () => {
           <MemeList memes={regular} type="regular"/>
         </Route>
       </Switch>
-    </>
+    </div>
   );
 }
 
