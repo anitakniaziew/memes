@@ -1,6 +1,8 @@
+@import './styles/colors.scss';
+
 .App {
   text-align: center;
   display: flex;
   height: 100vh;
-  color: #babec4;
+  color: $navy;
 }
