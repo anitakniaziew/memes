@@ -1,0 +1,23 @@
+@import '../../styles/colors.scss';
+
+.header {
+  width: 170px;
+  height: 100%;
+  color: $grey;
+  background-color: $navy;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+  .navLink:hover {
+    color: $white;
+  }
+
+  .navLink.active {
+    color: $white;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+}
