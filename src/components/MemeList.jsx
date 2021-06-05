@@ -11,6 +11,7 @@ const MemeList = ({memes, type}) => {
         img={img}
         downvotes={downvotes}
         upvotes={upvotes}
+        type={type}
       />) }
     </div>
   )

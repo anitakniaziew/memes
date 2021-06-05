@@ -1,0 +1,17 @@
+.voteBtn {
+  width: 50%;
+  border: none;
+  background-color: initial;
+  padding: 1rem;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+
+  &.hot,
+  &.regular {
+    font-weight: 700;
+  }
+}
