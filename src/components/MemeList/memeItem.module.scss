@@ -1,0 +1,75 @@
+@import '../../styles/colors.scss';
+
+.memeItemContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $grey;
+  border-radius: 6px;
+  height: 95vh;
+  margin-bottom: 2rem;
+  color: $grey;
+  background-color: $navy;
+  justify-content: space-between;
+}
+
+.memeTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.memeImg {
+  height: 75%;
+}
+
+.favBtn {
+  &:hover {
+    cursor: pointer;
+    stroke: white;
+    fill: $navy;
+  }
+
+  &.active {
+    stroke: $green;
+    fill: $green;
+  }
+}
+
+.voteBtnsContainer {
+  display: flex;
+}
+
+.voteBtn {
+  width: 50%;
+  border: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  background-color: $green;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-weight: 700;
+
+  &:first-of-type {
+    border-radius: 0 0 0 6px;
+  }
+  &:last-of-type {
+    border-radius: 0 0 6px 0;
+  }
+
+  svg {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    background-color: $navy;
+  }
+
+  &.hot,
+  &.regular {
+  }
+}
