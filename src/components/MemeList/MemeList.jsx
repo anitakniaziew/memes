@@ -1,4 +1,5 @@
 import MemeItem from './MemeItem';
+import PropTypes from 'prop-types';
 import styles from './memeList.module.scss';
 
 const MemeList = ({ memes, type }) => {
@@ -21,6 +22,10 @@ const MemeList = ({ memes, type }) => {
       ))}
     </div>
   );
+};
+MemeList.propTypes = {
+  meme: PropTypes.array,
+  type: PropTypes.string,
 };
 
 export default MemeList;

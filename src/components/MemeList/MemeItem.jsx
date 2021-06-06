@@ -54,5 +54,6 @@ MemeItem.propTypes = {
   title: PropTypes.string,
   downvotes: PropTypes.number,
   upvotes: PropTypes.number,
+  type: PropTypes.string,
 };
 export default MemeItem;
