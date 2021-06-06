@@ -24,7 +24,7 @@ const Navbar = () => {
           <AcUnitOutlinedIcon /> Regular
         </Link>
       </ul>
-      <small>Copywright &copy; Anita Kowalska</small>
+      <small>Copywright &copy; A.Kowalska</small>
     </nav>
   );
 };
