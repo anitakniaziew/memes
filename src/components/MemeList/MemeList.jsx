@@ -24,7 +24,15 @@ const MemeList = ({ memes, type }) => {
   );
 };
 MemeList.propTypes = {
-  meme: PropTypes.array,
+  meme: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      img: PropTypes.string,
+      title: PropTypes.string,
+      downvotes: PropTypes.number,
+      upvotes: PropTypes.number,
+    })
+  ),
   type: PropTypes.string,
 };
 
