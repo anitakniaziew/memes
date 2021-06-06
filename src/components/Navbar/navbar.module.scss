@@ -11,13 +11,50 @@
   justify-content: space-between;
   padding: 1rem 0;
 
-  .navLink:hover {
-    color: $white;
+  .navLinks {
+    list-style: none;
+
+    .navLink {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      padding: 1rem;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        background-color: rgba(192, 192, 192, 0.096);
+      }
+
+      &:hover,
+      &.active {
+        color: $white;
+        font-weight: 600;
+      }
+    }
   }
 
-  .navLink.active {
-    color: $white;
-    text-decoration: underline;
-    font-weight: 600;
+  small {
+    padding-left: 1rem;
+  }
+
+  @media (max-width: 769px) {
+    width: 100%;
+    height: auto;
+
+    .navLinks {
+      display: flex;
+
+      .navLink {
+        margin-right: 1rem;
+        align-items: center;
+      }
+    }
+
+    small {
+      display: none;
+    }
   }
 }
