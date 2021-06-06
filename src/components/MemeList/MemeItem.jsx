@@ -18,7 +18,7 @@ const MemeItem = ({ id, img, title, downvotes, upvotes, type }) => {
         <h2>{title}</h2>
         <StarBorderIcon
           className={classnames([styles.favBtn, { [styles.active]: isFav }])}
-          onClick={() => setIsFav(!isFav)}
+          onClick={() => setIsFav((prevState) => !prevState)}
         />
       </div>
       <img src={img} alt="meme" className={styles.memeImg} />
