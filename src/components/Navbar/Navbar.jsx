@@ -2,11 +2,12 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import AcUnitOutlinedIcon from '@material-ui/icons/AcUnitOutlined';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import classnames from 'classnames';
+import { HOT, REGULAR } from '../../routes';
 import styles from './navbar.module.scss';
 
 const Navbar = () => {
-  const hot = useRouteMatch('/hot');
-  const regular = useRouteMatch('/regular');
+  const hot = useRouteMatch(HOT);
+  const regular = useRouteMatch(REGULAR);
 
   return (
     <nav className={styles.header}>
