@@ -1,8 +1,11 @@
 @import './styles/colors.scss';
 
 .App {
-  text-align: center;
   display: flex;
   height: 100vh;
   color: $navy;
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+  }
 }

@@ -1,3 +1,7 @@
 .memeList {
   width: 50%;
+
+  @media (max-width: 769px) {
+    width: 100%;
+  }
 }
