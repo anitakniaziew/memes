@@ -25,7 +25,7 @@
 .favBtn {
   &:hover {
     cursor: pointer;
-    stroke: white;
+    stroke: $white;
     fill: $navy;
   }
 
@@ -70,6 +70,6 @@
 
   &.hot,
   &.regular {
-    color: gold;
+    color: $gold;
   }
 }
