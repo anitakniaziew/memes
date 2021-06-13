@@ -1,6 +1,7 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import MemeList from '../MemeList/MemeList';
+import PageNotFound from '../PageNotFound/PageNotFound';
 import styles from './main.module.scss';
 
 const Main = () => {
@@ -22,6 +23,9 @@ const Main = () => {
         </Route>
         <Route path="/regular">
           <MemeList memes={regular} type="regular" />
+        </Route>
+        <Route path="*">
+          <PageNotFound />
         </Route>
       </Switch>
     </div>
