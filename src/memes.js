@@ -5,6 +5,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+1.jpeg",
+    favourite: false,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+2.jpeg",
+    favourite: false,
   },
   {
     id: 3,
@@ -19,20 +21,23 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+3.jpg",
+    favourite: false,
   },  
   {
     id: 4,
     title: "Mem 4",
     upvotes: 0,
     downvotes: 0,
-    img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+4.png"
+    img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+4.png",
+    favourite: false,
   },  
   {
     id: 5,
     title: "Mem 5",
     upvotes: 0,
     downvotes: 0,
-    img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+5.jpeg"
+    img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+5.jpeg",
+    favourite: false,
   },  
   {
     id: 6,
@@ -40,6 +45,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+6.jpeg",
+    favourite: false,
   },  
   {
     id: 7,
@@ -47,6 +53,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+7.jpeg",
+    favourite: false,
   },  
   {
     id: 8,
@@ -54,6 +61,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+8.jpeg",
+    favourite: false,
   },
   {
     id: 9,
@@ -61,6 +69,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+9.png",
+    favourite: false,
   },
   {
     id: 10,
@@ -68,6 +77,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+10.jpeg",
+    favourite: false,
   },
   {
     id: 11,
@@ -75,6 +85,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+11.jpeg",
+    favourite: false,
   },
   {
     id: 12,
@@ -82,6 +93,7 @@ const MEMES = [
     upvotes: 0,
     downvotes: 0,
     img: "https://meme-project-alk.s3.eu-central-1.amazonaws.com/Plik+12.jpeg",
+    favourite: false,
   },
 
 ]

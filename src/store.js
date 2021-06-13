@@ -14,10 +14,14 @@ const slice = createSlice({
     downvote(state, action) {
       state.find((item) => item.id === action.payload).downvotes++;
     },
+    toggleFavourite(state, action) {
+      const itemToUpdate = state.find((item) => item.id === action.payload);
+      itemToUpdate.favourite = !itemToUpdate.favourite;
+    }
   },
 });
 
 const store = configureStore({ reducer: { memes: slice.reducer } });
 
-export const { upvote, downvote } = slice.actions;
+export const { upvote, downvote, toggleFavourite } = slice.actions;
 export default store;

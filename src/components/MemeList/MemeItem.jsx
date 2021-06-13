@@ -1,15 +1,13 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import classnames from 'classnames';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import { downvote, upvote } from '../../store';
+import { downvote, upvote, toggleFavourite } from '../../store';
 import styles from './memeItem.module.scss';
 
-const MemeItem = ({ id, img, title, downvotes, upvotes, type }) => {
-  const [isFav, setIsFav] = useState(false);
+const MemeItem = ({ id, img, title, downvotes, upvotes, favourite, type }) => {
   const dispatch = useDispatch();
 
   return (
@@ -17,8 +15,11 @@ const MemeItem = ({ id, img, title, downvotes, upvotes, type }) => {
       <div className={styles.memeTitle}>
         <h2>{title}</h2>
         <StarBorderIcon
-          className={classnames([styles.favBtn, { [styles.active]: isFav }])}
-          onClick={() => setIsFav((prevState) => !prevState)}
+          className={classnames([
+            styles.favBtn,
+            { [styles.active]: favourite },
+          ])}
+          onClick={() => dispatch(toggleFavourite(id))}
         />
       </div>
       <img src={img} alt="meme" className={styles.memeImg} />
@@ -54,6 +55,7 @@ MemeItem.propTypes = {
   title: PropTypes.string,
   downvotes: PropTypes.number,
   upvotes: PropTypes.number,
+  favourite: PropTypes.bool,
   type: PropTypes.string,
 };
 export default MemeItem;

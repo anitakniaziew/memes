@@ -9,7 +9,7 @@ const MemeList = ({ memes, type }) => {
 
   return (
     <div className={styles.memeList}>
-      {memes.map(({ id, title, img, downvotes, upvotes }) => (
+      {memes.map(({ id, title, img, downvotes, upvotes, favourite }) => (
         <MemeItem
           id={id}
           key={id}
@@ -17,6 +17,7 @@ const MemeList = ({ memes, type }) => {
           img={img}
           downvotes={downvotes}
           upvotes={upvotes}
+          favourite={favourite}
           type={type}
         />
       ))}
@@ -31,6 +32,7 @@ MemeList.propTypes = {
       title: PropTypes.string,
       downvotes: PropTypes.number,
       upvotes: PropTypes.number,
+      favourite: PropTypes.bool,
     })
   ),
   type: PropTypes.string,
