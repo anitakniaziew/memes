@@ -33,6 +33,13 @@ Clone this repository
 $ git clone https://github.com/anitakniaziew/memes
 ```
 
+Install dependencies
+
+```
+$ cd memes
+$ npm install
+```
+
 Available Scripts
 
 In the project directory, you can run:
